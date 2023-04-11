@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu site de comércio eletrônico</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Departamentos</a></li>
+          <li><a href="#">Ofertas do dia</a></li>
+          <li><a href="#">Mais vendidos</a></li>
+          <li><a href="#">Atendimento ao cliente</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <h1>Bem-vindo ao nosso site de comércio eletrônico</h1>
+        <p>Encontre tudo o que precisa aqui e receba na sua casa com segurança e praticidade.</p>
+      </div>
+    </header>
+    <main>
+      <section class="categorias">
+        <h2>Categorias</h2>
+        <div class="categoria">
+          <img src="images/categoria1.jpg" alt="Categoria 1">
+          <h3>Categoria 1</h3>
+        </div>
+        <div class="categoria">
+          <img src="images/categoria2.jpg" alt="Categoria 2">
+          <h3>Categoria 2</h3>
+        </div>
+        <div class="categoria">
+          <img src="images/categoria3.jpg" alt="Categoria 3">
+          <h3>Categoria 3</h3>
+        </div>
+      </section>
+</main>
+<footer>
+  <div class="footer-text">
+    <h3>Contato</h3>
+    <p>Entre em contato conosco pelo telefone (11) 1234-5678 ou pelo email contato@meusite.com.br</p>
+  </div>
+  <div class="footer-text">
+    <h3>Redes sociais</h3>
+    <ul>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Twitter</a></li>
+    </ul>
+  </div>
+  <div class="footer-text">
+    <h3>Sobre nós</h3>
+    <p>Somos uma loja de comércio eletrônico que busca oferecer aos nossos clientes os melhores produtos com preços acessíveis e entrega rápida.</p>
+  </div>
+</footer>
+  </body>
+</html>
