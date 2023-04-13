@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Produto - Minha Loja Online</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Categorias</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Minha Conta</a></li>
+        <li><a href="#">Carrinho</a></li>
+      </ul>
+    </nav>
+    <div class="header-content">
+      <h1>Produto - Minha Loja Online</h1>
+      <p>Compre com segurança e rapidez!</p>
+    </div>
+  </header>
+  <main>
+    <section class="product-details">
+      <div class="product-image">
+        <img src="{{ url_for('static', filename='images/product-1.jpg') }}" alt="Produto 1">
+      </div>
+      <div class="product-info">
+        <h2>Produto 1</h2>
+        <p class="category">Categoria 1</p>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum felis ac quam viverra, ac pellentesque turpis efficitur. Sed et nisl nibh. Pellentesque faucibus aliquet eleifend. Nulla malesuada felis et ante vestibulum blandit. Donec euismod finibus bibendum. Morbi pellentesque justo eu risus vehicula, quis molestie odio vehicula. Sed in dolor euismod, lobortis turpis a, malesuada nisi. Etiam eu ligula euismod, lobortis augue in, tristique quam. Fusce aliquet, sem eget elementum commodo, arcu mauris tempus augue, ut mollis sapien dolor vel mi. Donec laoreet convallis elit, non bibendum sapien tempor id. Sed id ex non purus feugiat eleifend in a neque. Nulla blandit venenatis eros, at fermentum lacus euismod sit amet. Aenean dapibus aliquam nunc, vel imperdiet est malesuada ut. Nam molestie varius dolor, id finibus justo convallis non.</p>
+        <ul class="attributes">
+          <li>Cor: Azul</li>
+          <li>Tamanho: M</li>
+          <li>Material: Algodão</li>
+        </ul>
+        <div class="price-quantity">
+          <p class="price">R$ 49,99</p>
+          <form>
+            <label for="quantity">Quantidade:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+          </form>
+        </div>
+        <a href="#" class="button">Adicionar ao Carrinho</a>
+      </div>
+    </section>
+</main>
+  <footer>
+    <div class="footer-text">
+    <h3>Contato</h3>
+    <p>Entre em contato conosco pelo telefone (11) 1234-5678 ou pelo email contato@meusite.com.br</p>
+    </div>
+      <div class="footer-text">
+        <h3>Redes sociais</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+      <div class="footer-text">
+        <h3>Sobre nós</h3>
+        <p>Somos uma loja de comércio eletrônico que busca oferecer aos nossos clientes os melhores produtos com preços acessíveis e entrega rápida.</p>
+      </div>
+    </footer>
+  </body>
+</html>
