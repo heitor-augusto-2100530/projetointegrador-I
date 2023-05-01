@@ -25,46 +25,15 @@
   </header>
 <body>
   <main>
-    <h1>Lista de produtos - Categoria X</h1>
-    <div class="product-list">
-      <div class="product">
-        <img src="product1.jpg" alt="Produto 1">
-        <h3>Produto 1</h3>
-        <p class="description">Descrição do Produto 1</p>
-        <p class="attributes">Atributo 1: valor<br>Atributo 2: valor<br>Atributo 3: valor</p>
-        <p class="price">R$ 100,00</p>
-        <form>
-          <label for="quantity">Quantidade:</label>
-          <input type="number" id="quantity" name="quantity" value="1" min="1">
-          <button type="submit">Adicionar ao carrinho</button>
-        </form>
-      </div>
-      <div class="product">
-        <img src="product2.jpg" alt="Produto 2">
-        <h3>Produto 2</h3>
-        <p class="description">Descrição do Produto 2</p>
-        <p class="attributes">Atributo 1: valor<br>Atributo 2: valor<br>Atributo 3: valor</p>
-        <p class="price">R$ 150,00</p>
-        <form>
-          <label for="quantity">Quantidade:</label>
-          <input type="number" id="quantity" name="quantity" value="1" min="1">
-          <button type="submit">Adicionar ao carrinho</button>
-        </form>
-      </div>
-      <div class="product">
-        <img src="product3.jpg" alt="Produto 3">
-        <h3>Produto 3</h3>
-        <p class="description">Descrição do Produto 3</p>
-        <p class="attributes">Atributo 1: valor<br>Atributo 2: valor<br>Atributo 3: valor</p>
-        <p class="price">R$ 200,00</p>
-        <form>
-          <label for="quantity">Quantidade:</label>
-          <input type="number" id="quantity" name="quantity" value="1" min="1">
-          <button type="submit">Adicionar ao carrinho</button>
-        </form>
-      </div>
-    </div>
-</main>
+  {% for sku in skus %}
+  <div class="sku">
+    <h3><br><br>{{ sku[1] }}<br><br></h3>
+    <a href="{{ url_for('product_html', id=sku[0]) }}">
+      <img src="{{ 'static/sku_images/' + sku[2] }}" alt="{{ sku[1] }}">
+    </a>
+  </div>
+  {% endfor %}
+  </main>
   <footer>
     <div class="footer-text">
     <h3>Contato</h3>

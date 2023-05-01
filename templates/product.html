@@ -26,25 +26,17 @@
   <main>
     <section class="product-details">
       <div class="product-image">
-        <img src="{{ url_for('static', filename='images/product-1.jpg') }}" alt="Produto 1">
+        <img src="{{ 'static/sku_images/' + data[2] }}" alt="{{ data[0] }}">
       </div>
       <div class="product-info">
-        <h2>Produto 1</h2>
-        <p class="category">Categoria 1</p>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum felis ac quam viverra, ac pellentesque turpis efficitur. Sed et nisl nibh. Pellentesque faucibus aliquet eleifend. Nulla malesuada felis et ante vestibulum blandit. Donec euismod finibus bibendum. Morbi pellentesque justo eu risus vehicula, quis molestie odio vehicula. Sed in dolor euismod, lobortis turpis a, malesuada nisi. Etiam eu ligula euismod, lobortis augue in, tristique quam. Fusce aliquet, sem eget elementum commodo, arcu mauris tempus augue, ut mollis sapien dolor vel mi. Donec laoreet convallis elit, non bibendum sapien tempor id. Sed id ex non purus feugiat eleifend in a neque. Nulla blandit venenatis eros, at fermentum lacus euismod sit amet. Aenean dapibus aliquam nunc, vel imperdiet est malesuada ut. Nam molestie varius dolor, id finibus justo convallis non.</p>
+        <h2>{{ data[0] }}</h2>
+        <p class="description">{{ data[1] }}</p>
         <ul class="attributes">
           <li>Cor: Azul</li>
           <li>Tamanho: M</li>
           <li>Material: Algodão</li>
         </ul>
-        <div class="price-quantity">
-          <p class="price">R$ 49,99</p>
-          <form>
-            <label for="quantity">Quantidade:</label>
-            <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
-          </form>
         </div>
-        <a href="#" class="button">Adicionar ao Carrinho</a>
       </div>
     </section>
 </main>

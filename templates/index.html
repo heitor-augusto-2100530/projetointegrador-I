@@ -24,20 +24,16 @@
     <main>
       <section class="categorias">
         <h2>Categorias</h2>
-        <div class="categoria">
-          <img src="images/categoria1.jpg" alt="Categoria 1">
-          <h3>Categoria 1</h3>
-        </div>
-        <div class="categoria">
-          <img src="images/categoria2.jpg" alt="Categoria 2">
-          <h3>Categoria 2</h3>
-        </div>
-        <div class="categoria">
-          <img src="images/categoria3.jpg" alt="Categoria 3">
-          <h3>Categoria 3</h3>
-        </div>
+        {% for categoria in categorias %}
+          <div class="categoria">
+            <h3><br><br>{{ categoria[1] }}<br><br></h3>
+            <a href="{{ url_for('category_html', id=categoria[0]) }}">
+              <img src="{{ 'static/category_images/' + categoria[3] }}" alt="{{ categoria[1] }}">
+            </a>
+          </div>
+        {% endfor %}
       </section>
-</main>
+    </main>
   <footer>
     <div class="footer-text">
     <h3>Contato</h3>
