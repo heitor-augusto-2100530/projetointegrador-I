@@ -6,7 +6,7 @@ from flask import request
 app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'tws_bd.mysql.dbaas.com.br'
 app.config['MYSQL_USER'] = 'tws_bd'
-app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_PASSWORD'] = 'RecDig2@20'
 app.config['MYSQL_DB'] = 'tws_bd'
 mysql = MySQL(app)
 

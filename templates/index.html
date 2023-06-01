@@ -3,32 +3,27 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu site de comércio eletrônico</title>
+    <title>Divino Basics</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
     <header>
+      <h1>Conforto é básico. Divino.</h1>
+    </header>
       <nav>
         <ul>
-          <li><a href="#">Departamentos</a></li>
-          <li><a href="#">Ofertas do dia</a></li>
-          <li><a href="#">Mais vendidos</a></li>
-          <li><a href="#">Atendimento ao cliente</a></li>
+          <li><a href="https://wa.me/message/2ANAMSFEO3JWL1">Atendimento ao cliente</a></li>
         </ul>
       </nav>
-      <div class="header-text">
-        <h1>Bem-vindo ao nosso site de comércio eletrônico</h1>
-        <p>Encontre tudo o que precisa aqui e receba na sua casa com segurança e praticidade.</p>
-      </div>
-    </header>
+
     <main>
       <section class="categorias">
-        <h2>Categorias</h2>
+        <h1>Coleções</h1>
         {% for categoria in categorias %}
           <div class="categoria">
             <h3><br><br>{{ categoria[1] }}<br><br></h3>
             <a href="{{ url_for('category_html', id=categoria[0]) }}">
-              <img src="{{ 'static/category_images/' + categoria[3] }}" alt="{{ categoria[1] }}">
+              <img src="{{ 'static/category_images/' + categoria[3] }}" alt="{{ categoria[1] }}" width="400">
             </a>
           </div>
         {% endfor %}
@@ -37,19 +32,18 @@
   <footer>
     <div class="footer-text">
     <h3>Contato</h3>
-    <p>Entre em contato conosco pelo telefone (11) 1234-5678 ou pelo email contato@meusite.com.br</p>
+    <p>Entre em contato comigo pelo telefone (19) 996258380 ou pelo email contato.divinobasics@gmail.com</p>
     </div>
       <div class="footer-text">
         <h3>Redes sociais</h3>
         <ul>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Twitter</a></li>
+          <li><a href="https://wa.me/message/2ANAMSFEO3JWL1">Whatsapp</a></li>
+          <li><a href="https://instagram.com/divinobasics?igshid=MzRlODBiNWFlZA==">Instagram</a></li>
         </ul>
       </div>
       <div class="footer-text">
-        <h3>Sobre nós</h3>
-        <p>Somos uma loja de comércio eletrônico que busca oferecer aos nossos clientes os melhores produtos com preços acessíveis e entrega rápida.</p>
+        <h3>Sobre a Divino</h3>
+        <p>Acredito que a autoestima da mulher esteja ligada diretamente ao modo que ela se veste, e quero trazer essa beleza pra fora com as peças da Divino</p>
       </div>
     </footer>
   </body>
