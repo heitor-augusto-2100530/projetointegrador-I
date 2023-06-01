@@ -2,11 +2,12 @@ from flask import Flask
 from flask import render_template
 from flask_mysqldb import MySQL
 from flask import request
+import os
 
 app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'tws_bd.mysql.dbaas.com.br'
 app.config['MYSQL_USER'] = 'tws_bd'
-app.config['MYSQL_PASSWORD'] = 'RecDig2@20'
+app.config['MYSQL_PASSWORD'] = os.getenv('PI_DB_PASSWORD')
 app.config['MYSQL_DB'] = 'tws_bd'
 mysql = MySQL(app)
 
